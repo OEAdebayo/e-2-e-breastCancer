@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+gui = ["PyQt5"]
+cli = [
+  "rich",
+  "click",
+]
+
+[project.gui-scripts]
+utils-gui = "utils:utils_gui"
+utils-cli = "utils:utils_cli"
+steps-cli = "steps:steps_cli"
+pipelines-cli = "pipelines:pipelines_cli"
+
+[project]
+dynamic = ["version"]
+name = "breast-cancer-classifier"
+authors = [
+    {name = "Olusegun Ekundayo Adebayo", email = "segun.adebayo65@yahoo.com"},
+]
+maintainers = [
+   {name = "Olusegun Ekundayo Adebayo", email = "segun.adebayo65@yahoo.com"}
+]
+license = {file = "LICENSE"}
+
+description = "A package for classifying breast cancer"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/OEAdebayo/e-2-e-breastCancer"
+Issues = "https://github.com/pypa/sampleproject/issues"
+Repository = "https://github.com/OEAdebayo/e-2-e-breastCancer"
